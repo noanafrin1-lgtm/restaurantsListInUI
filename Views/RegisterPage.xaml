@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="restaurantsListInUI.Views.RegisterPage"
+             Title="RegisterPage">
+
+    <Grid RowDefinitions="*, auto">
+        <ScrollView Grid.Row="0" BackgroundColor="{x:StaticResource Gray200}">
+            <VerticalStackLayout>
+                <Label Text="Full Name"
+                        FontFamily="NoaFont"
+                        FontSize="20"/>
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Entry x:Name="entryFullName" Placeholder="Full Name"/>
+                </Border>
+
+                <Label x:Name="errFullName" Text="" TextColor="{x:StaticResource Red11}"/>
+
+                <Label Text="Email address: "
+                        FontFamily="NoaFont"
+                        FontSize="20"/>
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Entry x:Name="entryEmail" Placeholder="Enter your email"/>
+                </Border>
+
+                <Label x:Name="errEmail" Text="" TextColor="{x:StaticResource Red11}"/>
+
+                
+               
+                
+                <Label Text="Password"
+                        FontFamily="NoaFont"
+                        FontSize="20"/>
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Entry x:Name="entryPassword" Placeholder="Enter your password"/>
+                </Border>
+                <Label x:Name="errPassword" Text="" TextColor="{x:StaticResource Red11}"/>
+                
+                
+           
+                <Label Text="Confirm Password"
+                        FontFamily="NoaFont"
+                        FontSize="20"/>
+                <Border>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Entry x:Name="entryPassword2"  Placeholder="Confirm Password"/>
+                </Border>
+                <Label x:Name="errPassword2" Text="" TextColor="{x:StaticResource Red11}"/>
+
+                
+                
+                
+
+            </VerticalStackLayout>
+        </ScrollView>
+        <VerticalStackLayout Grid.Row="1" BackgroundColor="{x:StaticResource Gray500}">
+            <Button  Clicked="btnSwithPageToLogin" Text="Go to Login"/>
+            <Button Clicked="btnRegister" Text="Register"/>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

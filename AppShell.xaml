@@ -4,11 +4,27 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:restaurantsListInUI.Views"
-    Title="restaurantsListInUI">
+    Title="restaurantsListInUI"
+    Padding="10"
+    FlyoutBehavior="Locked">
+
 
     <ShellContent
-        Title="Home"
+         Title="Login Page"
+         ContentTemplate="{DataTemplate local:LoginPage}"
+         Route="LoginPage" />
+    <ShellContent
+         Title="Register Page"
+         ContentTemplate="{DataTemplate local:RegisterPage}"
+         Route="RegisterPage" />
+    <ShellContent
+     Title="Restaurant"
+     ContentTemplate="{DataTemplate local:RestaurantAsListPage}"
+     Route="RestaurantAsListPage" />
+    <ShellContent
+        Title="Resto List"
         ContentTemplate="{DataTemplate local:RestaurantListPage}"
-        Route="MainPage" />
+        Route="RestaurantListPage" />
+
 
 </Shell>

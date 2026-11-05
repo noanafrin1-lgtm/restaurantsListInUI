@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace restaurantsListInUI.Models
 {
-    internal class Restaurant
+    public class Restaurant
     {
         public string RestName { get; set; }
         public bool Kosher { get; set; }

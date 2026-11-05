@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace restaurantsListInUI.Models
 {
-    internal class Location
+    public class Location
     {
         public long X { get; set; }
         public long Y { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace restaurantsListInUI.Models
 {
-    internal class RestType
+    public class RestType
     {
         public string Name { get; set; }
         public string Icon { get; set; }
