@@ -21,9 +21,9 @@
                 <DataTemplate>
                     <HorizontalStackLayout Padding="5" Spacing="5">
                         <Label Text="{Binding RestName}" VerticalOptions="Center"/>
-                        <!--<Label Text="{Binding Kosher}" VerticalOptions="Center"/>-->
+                        <Label Text="{Binding Kosher}" VerticalOptions="Center"/>
                         <Label Text="{Binding CostLevel}" VerticalOptions="Center"/>
-                        <Button Clicked="bt_Clicked" Text="kosher?"/>
+                        <!--<Button Clicked="bt_Clicked" Text="kosher?"/>-->
                         <Image
                             HeightRequest="50"
                             Source="{Binding Image}"

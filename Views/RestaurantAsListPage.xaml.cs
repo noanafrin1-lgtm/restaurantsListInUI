@@ -15,7 +15,7 @@ public partial class RestaurantAsListPage : ContentPage
     }
     private async void bt_Clicked()
 	{
-		if(Binding Kosher)
+
 
     }
 }

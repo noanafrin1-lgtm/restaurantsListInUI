@@ -65,7 +65,8 @@
             </VerticalStackLayout>
         </ScrollView>
         <VerticalStackLayout Grid.Row="1" BackgroundColor="{x:StaticResource Gray500}">
-            <Button  Clicked="btnSwithPageToLogin" Text="Go to Login"/>
+            <!--<Button  Clicked="btnSwithPageToLogin" Text="Go to Login"/>-->
+            <Button Command="{Binding GoToLoginCommand}" Text="Go to login"/>
             <Button Clicked="btnRegister" Text="Register"/>
         </VerticalStackLayout>
     </Grid>
