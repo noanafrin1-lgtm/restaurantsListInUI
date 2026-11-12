@@ -37,9 +37,9 @@
             </VerticalStackLayout>
         </ScrollView>
         <VerticalStackLayout Grid.Row="1">
-            <Button Clicked="btnSwithPageToRegister" 
+            <Button Command="GoToRegisterCommand" 
                     Text="Go to register"/>
-            <Button Clicked="btnLogin"
+            <Button Command="SubmitLoginCommand"
                     Text="Login"/>
         </VerticalStackLayout>
     </Grid>
