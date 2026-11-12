@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace restaurantsListInUI.Models
 {
-    internal class User
+    public class User
     {
         public string FullName {  get; set; }
        // public DateTime BirthDay { get; set; }

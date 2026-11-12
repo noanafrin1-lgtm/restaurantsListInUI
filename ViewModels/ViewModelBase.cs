@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace restaurantsListInUI.ViewModels
 {
-    internal class ViewModelBase
+    public class ViewModelBase
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

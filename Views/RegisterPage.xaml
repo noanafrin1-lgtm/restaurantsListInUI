@@ -6,6 +6,7 @@
 
     <Grid RowDefinitions="*, auto">
         <ScrollView Grid.Row="0" BackgroundColor="{x:StaticResource Gray200}">
+            
             <VerticalStackLayout>
                 <Label Text="Full Name"
                         FontFamily="NoaFont"
@@ -14,10 +15,10 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="entryFullName" Placeholder="Full Name"/>
+                    <Entry Text="{Binding EntryFullName}" Placeholder="Full Name"/>
                 </Border>
 
-                <Label x:Name="errFullName" Text="" TextColor="{x:StaticResource Red11}"/>
+                <Label Text="{Binding ErrFullName}"  TextColor="{x:StaticResource Red11}"/>
 
                 <Label Text="Email address: "
                         FontFamily="NoaFont"
@@ -26,10 +27,10 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="entryEmail" Placeholder="Enter your email"/>
+                    <Entry Text="{Binding EntryEmail}" Placeholder="Enter your email"/>
                 </Border>
 
-                <Label x:Name="errEmail" Text="" TextColor="{x:StaticResource Red11}"/>
+                <Label Text="{Binding ErrEmail}" TextColor="{x:StaticResource Red11}"/>
 
                 
                
@@ -41,9 +42,9 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="entryPassword" Placeholder="Enter your password"/>
+                    <Entry Text="{Binding EntryPassword1}" Placeholder="Enter your password"/>
                 </Border>
-                <Label x:Name="errPassword" Text="" TextColor="{x:StaticResource Red11}"/>
+                <Label  Text="{Binding ErrPassword1}" TextColor="{x:StaticResource Red11}"/>
                 
                 
            
@@ -54,9 +55,9 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="entryPassword2"  Placeholder="Confirm Password"/>
+                    <Entry Text="{Binding EntryPassword2}" Placeholder="Confirm Password"/>
                 </Border>
-                <Label x:Name="errPassword2" Text="" TextColor="{x:StaticResource Red11}"/>
+                <Label Text="{Binding ErrPassword2}" TextColor="{x:StaticResource Red11}"/>
 
                 
                 
@@ -65,10 +66,9 @@
             </VerticalStackLayout>
         </ScrollView>
         <VerticalStackLayout Grid.Row="1" BackgroundColor="{x:StaticResource Gray500}">
-            <!--<Button  Clicked="btnSwithPageToLogin" Text="Go to Login"/>-->
             <Button Command="{Binding GoToLoginCommand}" Text="Go to login"/>
-            <Button Clicked="btnRegister" Text="Register"/>
+            <Button Command="{Binding RegisterCommand}" Text="Register"/>
         </VerticalStackLayout>
     </Grid>
-
+   
 </ContentPage>

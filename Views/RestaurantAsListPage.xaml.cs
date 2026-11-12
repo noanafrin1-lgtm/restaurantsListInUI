@@ -13,9 +13,4 @@ public partial class RestaurantAsListPage : ContentPage
 		restaurants = DataRepository.GetRestaurantList().ToList();
 		BindingContext = this;
     }
-    private async void bt_Clicked()
-	{
-
-
-    }
 }

@@ -13,12 +13,11 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="entryEmail"
+                    <Entry Text="{Binding EntryEmail}"
                            Placeholder="Enter your email"/>
                 </Border>
 
-                <Label x:Name="errEmail"
-                       Text=""
+                <Label Text="{Binding ErrEmail}"
                        TextColor="{x:StaticResource Red11}"/>
 
                 <Label Text="Password :"
@@ -28,18 +27,21 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="entryPassword" Placeholder="Enter your password"/>
+                    <Grid ColumnDefinitions="*,50">
+                        <Entry Text="{Binding EntryPassword}" Placeholder="Enter your password" IsPassword="{Binding IsHidePassword}"/>
+                        <Button Text="VH" Command="{Binding ToggleViewPasswordCommand}" Grid.Column="1"/>
+                    </Grid>
+                   
                 </Border>
 
-                <Label x:Name="errPassword"
-                       Text=""
+                <Label Text="{Binding ErrPassword}"
                        TextColor="{x:StaticResource Red11}" />
             </VerticalStackLayout>
         </ScrollView>
         <VerticalStackLayout Grid.Row="1">
-            <Button Command="GoToRegisterCommand" 
+            <Button Command="{Binding GoToRegisterCommand}" 
                     Text="Go to register"/>
-            <Button Command="SubmitLoginCommand"
+            <Button Command="{Binding SubmitLoginCommand}"
                     Text="Login"/>
         </VerticalStackLayout>
     </Grid>
